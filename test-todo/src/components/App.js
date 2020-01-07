@@ -1,7 +1,6 @@
 import React from 'react';
 // import logo from './logo.svg';
 // import Test from "./test";
-
 const App = () => (
   // const aaa = [
   //   {

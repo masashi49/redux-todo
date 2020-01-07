@@ -1,9 +1,9 @@
-let nextTodoId = 0;
-
-export const adddTodo = (text) => {
+export const addTodo = ( nextTodoId, text ) => {
   return {
     type: 'ADD_TODO',
-    id: nextTodoId++,
-    text
+    // typeの後には更新したいstoreの情報を入れる
+    id: nextTodoId,
+    text,
+    inu: nextTodoId + 100
   }
 }
