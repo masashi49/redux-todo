@@ -15,11 +15,11 @@ const TodoList = ({ todos }) => (
 )
 //propで受け取った値の型をチェックする
 TodoList.propTypes = {
-  todos: PropTypes.shape({
+  todos: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
     inu: PropTypes.number.isRequired
-  })
+  }).isRequired).isRequired
 }
 
 export default TodoList
