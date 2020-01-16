@@ -1,13 +1,14 @@
-import React, { PropTypes } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Todo = ({ text, inu }) => (
+const Todo = ({ text, inu, id, aa }) => (
   <li>
-    {text}::{inu}
+    {text}::{inu}::{id}::{aa}
   </li>
 )
 
 Todo.propTypes = {
-  //text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired
 }
 
 export default Todo
