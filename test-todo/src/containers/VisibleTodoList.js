@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 
 //connectについては挙動をもう少し理解する mapStateToPropsえ返したstateを、使えるようにするカリー魔法？
 const VisibletodoList = connect(
-  mapStateToProps
-)(TodoList) // todoListにstateを使えるようにする
+  mapStateToProps //第一引数にpropsを入れる
+)(TodoList) // todoListにmapStateToPropsを通してstateを使えるようにする
 
 export default VisibletodoList
