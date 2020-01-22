@@ -2,7 +2,7 @@ const todo = (state, action) => {
     return {
         id: action.id,
         text: action.text,
-        inu: action.inu
+        inu: action.id + 1000,
     }
 }
 
