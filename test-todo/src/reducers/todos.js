@@ -1,4 +1,4 @@
-const todo = (state, action) => {
+const todo = ( state, action ) => {
     return {
         id: action.id,
         text: action.text,
@@ -11,16 +11,17 @@ const todo = (state, action) => {
  * 現在のstateとactionを受け取り、新しいstateを返す
 */
 
-const todos = (state = [], action) => {
-    switch (action.type) { //switchを使ってactionの種類を識別する
+const todos = ( state = [], action ) => {
+    switch ( action.type ) { //switchを使ってactionの種類を識別する
         case 'ADD_TODO':
-            console.log(...state); // {id: 1, text: "hello", inu: 101}
+            console.log( 'this is todo reducer' );
             // 現在のstateに、変更後のstateを追加。
-            const states = [...state, todo(undefined, action)] // log出しやすいように変数に代入
+            console.log( state );
+            const states = [ ...state, todo( undefined, action ) ] // log出しやすいように変数に代入
             return states  // returnすることでstoreを更新する
 
         default:
-            console.log(action) // storeもactionもdispatchで渡ってきているけどcaseが当てはまらないのでstoreを更新しない
+            console.log( action ) // storeもactionもdispatchで渡ってきているけどcaseが当てはまらないのでstoreを更新しない
             return state
     }
 }

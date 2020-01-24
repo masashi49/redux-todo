@@ -7,7 +7,7 @@ import todo from "./reducers"; // index.jsをtodoという名前で読み込ん�
 //import { addTodo } from './actions'
 import App from './components/App';
 
-let store = createStore(todo) // storeにtodoのreducerを食わせる
+let store = createStore( todo ) // storeにtodoのreducerを食わせる
 
 
 /**
@@ -20,9 +20,12 @@ let store = createStore(todo) // storeにtodoのreducerを食わせる
 // store.dispatch(addTodo(2, 'buy'))
 // console.log(store.getState())
 
+console.log( store.getState().todos )
+console.log( store.getState().nenes )
+
 render(
-  <Provider store={store}>
+  <Provider store={ store }>
     <App />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById( "root" )
 );
