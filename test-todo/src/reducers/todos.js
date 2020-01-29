@@ -14,8 +14,9 @@ const todo = (state, action) => {
 const todos = (state = [], action) => {
     switch (action.type) { //switchを使ってactionの種類を識別する
         case 'ADD_TODO':
-            console.log(...state); // {id: 1, text: "hello", inu: 101}
+            console.log('this is todo reducer');
             // 現在のstateに、変更後のstateを追加。
+            console.log(state);
             const states = [...state, todo(undefined, action)] // log出しやすいように変数に代入
             return states  // returnすることでstoreを更新する
 

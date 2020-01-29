@@ -9,6 +9,7 @@ import App from './components/App';
 
 let store = createStore(reducers) // storeにreducersのreducerを食わせる
 
+
 /**
  * store.dispatchを通して、reducersにactionを渡す
  * action クリエイターであるaddreducersをよぶ、actionのタイプを読みとり、storeに食わせたreducersのswitchが反応する
@@ -18,6 +19,9 @@ let store = createStore(reducers) // storeにreducersのreducerを食わせる
 
 // store.dispatch(addreducers(2, 'buy'))
 // console.log(store.getState())
+
+console.log(store.getState().todos)
+console.log(store.getState().nenes)
 
 render(
   <Provider store={store}>
