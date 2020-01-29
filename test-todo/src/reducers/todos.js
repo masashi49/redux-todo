@@ -20,7 +20,7 @@ const todos = (state = [], action) => {
             return states  // returnすることでstoreを更新する
 
         default:
-            console.log(action) // storeもactionもdispatchで渡ってきているけどcaseが当てはまらないのでstoreを更新しない
+            console.log(action + '::') // storeもactionもdispatchで渡ってきているけどcaseが当てはまらないのでstoreを更新しない
             return state
     }
 }
