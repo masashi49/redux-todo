@@ -1,28 +1,18 @@
-// reducerでreturnするstateは、それぞれが独立しているので、他のreducerと同じkeyをreturnしても混ざらないが、ややこしいのでちゃんと分けよう
-
-const nene = ( state, action ) => {
+const nene = (state, action) => {
     return {
-        id: action.id + 'nenes', // これは混ざりそうだけど混ざらない
-        nenes: {
-            id: action.id + 'nenes',
-            text: action.text + 'nenes',
-            inu: action.id + 1000 + 'nenes',
-            className: action.id,
-            textss: action.text,
-            neko: action.id + 1000,
-        }
+        className: action.className,
+        feature: action.feature,
     }
 }
 
-const nenes = ( state = [], action ) => {
-    switch ( action.type ) {
-        case 'ADD_TODO':
-            console.log( 'this is todo nenes' );
-            console.log( state );
-            const states = [ ...state, nene( undefined, action ) ] // log出しやすいように変数に代入
+const nenes = (state = [], action) => {
+    switch (action.type) { //switchを使ってactionの種類を識別する
+        case 'ADD_NENE':
+            console.log(...state);
+            const states = [...state, nene(undefined, action)] // log出しやすいように変数に代入
             return states  // returnすることでstoreを更新する
+
         default:
-            console.log( action )
             return state
     }
 }

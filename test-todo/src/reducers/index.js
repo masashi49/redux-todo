@@ -8,8 +8,9 @@ import { combineReducers } from 'redux'
 import todos from './todos'
 import nenes from './nenes'
 
-const todoApp = combineReducers( {
+
+const todoApp = combineReducers({
   todos,
   nenes
-} ) // todo reducersをcombineReducersに食わせて返す
+}) // todo reducersをcombineReducersに食わせて返す
 export default todoApp
