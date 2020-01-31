@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo, addNene } from '../actions'; // export const で addTodo 返してる
+import * as action from '../actions'; // export const で addTodo 返してる
 import '../add-todo.css';
 
 /**
@@ -26,7 +26,7 @@ let AddTodo = (store) => {
         }} />
 
         <button onClick={() => {
-          store.dispatch(addTodo(++id, input.value)) //valueだけを使う
+          store.dispatch(action.addTodo(++id, input.value)) //valueだけを使う
           input.value = ''
         }}>
           追加
@@ -39,7 +39,7 @@ let AddTodo = (store) => {
         }} />
 
         <button onClick={() => {
-          store.dispatch(addNene(++id, input.value)) //valueだけを使う
+          store.dispatch(action.addNene(++id, input.value)) //valueだけを使う
           input.value = ''
         }}>
           追加
